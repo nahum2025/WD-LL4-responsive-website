@@ -1,0 +1,17 @@
+/* Add a light gray background to the top header area */
+header {
+  background-color: #f0f0f0; /* light gray */
+  padding: 20px 0 20px 0; /* keep some space above and below */
+  text-align: left; /* align text to the left */
+}
+
+/* Make the header text smaller by 50% and align to top left */
+header h2 {
+  font-size: 1em; /* 50% smaller than default h2 (default is about 2em) */
+  margin: 0 0 0 20px; /* add a little space from the left edge */
+}
+}
+/* Make the main heading (h1) about 50% larger */
+h1 {
+  font-size: 2.25em; /* 1.5 times the default size (default is usually 1.5em) */
+}
