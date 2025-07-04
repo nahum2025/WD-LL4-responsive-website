@@ -1,3 +1,51 @@
+/* Background image for the main content area below the header */
+.background-image-container {
+  background: url('attachment://b7e2e2e2-6e2e-4e2e-8e2e-2e2e2e2e2e2e') center/cover no-repeat;
+  min-height: 80vh;
+  padding: 30px 0 0 0;
+  /* Add a semi-transparent white overlay for readability */
+  position: relative;
+}
+.background-image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.5); /* semi-transparent overlay */
+  z-index: 0;
+}
+.background-image-container > * {
+  position: relative;
+  z-index: 1;
+}
+/* Centered interactive text box with light transparent orange background */
+.center-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  background: rgba(255, 165, 0, 0.2); /* light transparent orange */
+  margin: 30px auto;
+  border-radius: 10px;
+  max-width: 400px;
+}
+.center-box input[type="text"] {
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 80%;
+}
+/* Position text in the bottom right corner */
+.bottom-right-text {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  font-size: 1.2em;
+  color: #333;
+}
 /* Add a light gray background to the top header area */
 header {
   background-color: #f0f0f0; /* light gray */
