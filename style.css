@@ -1,3 +1,25 @@
+/* Set a 75% transparent background image for the page, starting below the header */
+body {
+  position: relative;
+}
+
+.background-image {
+  position: fixed;
+  top: 80px; /* adjust if your header is taller/shorter */
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('img.jpg') no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0.75; /* 75% transparency */
+  z-index: 0;
+  pointer-events: none; /* allow clicks through the background */
+}
+
+main, .main-content, .center-box, header, h1, h2, h3, .bottom-right-text {
+  position: relative;
+  z-index: 1;
+}
 /* Background image for the main content area below the header */
 .background-image-container {
   background: url('attachment://b7e2e2e2-6e2e-4e2e-8e2e-2e2e2e2e2e2e') center/cover no-repeat;
