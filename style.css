@@ -1,17 +1,19 @@
 /* Set a 75% transparent background image for the page, starting below the header */
 body {
   position: relative;
+  /* Use Archivo Black font for the whole page */
+  font-family: 'Archivo Black', Arial, sans-serif;
 }
 
 .background-image {
   position: fixed;
-  top: 80px; /* adjust if your header is taller/shorter */
+  top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   background: url('img.jpg') no-repeat center center fixed;
-  background-size: cover;
-  opacity: 0.75; /* 75% transparency */
+  background-size: cover; /* Ensures the image always covers the whole background */
+  opacity: 1; /* 100% opaque */
   z-index: 0;
   pointer-events: none; /* allow clicks through the background */
 }
@@ -47,18 +49,24 @@ main, .main-content, .center-box, header, h1, h2, h3, .bottom-right-text {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 120px;
+  height: 70px; /* smaller height */
   background: rgba(255, 165, 0, 0.2); /* light transparent orange */
   margin: 30px auto;
   border-radius: 10px;
-  max-width: 400px;
+  max-width: 320px; /* smaller width */
+  padding: 0 10px;
 }
 .center-box input[type="text"] {
-  padding: 10px;
-  font-size: 1em;
+  padding: 6px;
+  font-size: 0.9em;
   border: 1px solid #ccc;
   border-radius: 5px;
-  width: 80%;
+  width: 60%; /* smaller width */
+}
+.center-box button {
+  padding: 6px 12px;
+  font-size: 0.9em;
+  margin-left: 8px;
 }
 /* Position text in the bottom right corner */
 .bottom-right-text {
@@ -70,7 +78,7 @@ main, .main-content, .center-box, header, h1, h2, h3, .bottom-right-text {
 }
 /* Add a light gray background to the top header area */
 header {
-  background-color: #f0f0f0; /* light gray */
+  background-color: rgba(240, 240, 240, 0.5); /* 50% transparent light gray */
   padding: 20px 0 20px 0; /* keep some space above and below */
   text-align: left; /* align text to the left */
 }
@@ -80,8 +88,12 @@ header h2 {
   font-size: 1em; /* 50% smaller than default h2 (default is about 2em) */
   margin: 0 0 0 20px; /* add a little space from the left edge */
 }
-}
-/* Make the main heading (h1) about 50% larger */
 h1 {
-  font-size: 2.25em; /* 1.5 times the default size (default is usually 1.5em) */
+  font-size: 36pt; /* 36 points for a large heading */
+  font-weight: bold; /* Make the main heading bold */
+  color: #fff; /* Make the main heading white */
+}
+/* Make the subheading (h3) match the color of h1 */
+h3 {
+  color: #fff; /* Make the subheading white like h1 */
 }
